@@ -40,7 +40,8 @@ int main (int argc, char** argv) {
                 /* figure out time elapsed */
             seconds = finish.tv_sec - start.tv_sec;
             ns = finish.tv_nsec - start.tv_nsec;
-            if (start.tv_nsec > finish.tv_nsec) { // clock underflow
+            if (start.tv_nsec > finish.tv_nsec) // clock underflow
+            {
                 --seconds;
                 ns += 1000000000;
             }
