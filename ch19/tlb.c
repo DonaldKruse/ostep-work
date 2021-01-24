@@ -35,6 +35,7 @@ int main (int argc, char** argv) {
             clock_gettime(CLOCK_REALTIME, &start);
             for (i = 0; i < NUMPAGES * jump; i += jump)
                 a[i] += 1;
+
             clock_gettime(CLOCK_REALTIME, &finish);
 
                 /* figure out time elapsed */
